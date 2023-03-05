@@ -1,20 +1,32 @@
 header h1 {
-    font-size: 40pt;
-    text-transform: uppercase;
-    text-align: center;
-    background: url("bg.png") left / auto 100% no-repeat;
+  font-size: 40pt;
+  text-transform: uppercase;
+  text-align: center;
+  background: url("bg.png") left / auto 100% no-repeat;
 }
 
 nav {
-    font-size: 16pt;
-    width: 150px;
-    float: left;
+  font-size: 16pt;
+  width: 150px;
+  float: left;
 }
 nav a {
-    display: block;
-    margin: 10px 0px;
-    text-decoration: none;
+  display: block;
+  margin: 10px 0px;
+  text-decoration: none;
 }
 section {
-    margin-left: 170px;
+  margin-left: 170px;
+  display: flex;
+  max-width: 1300px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+div {
+  border: 2px black solid;
+  border-radius: 10px;
+  padding: 20px;
+  width: 550px;
+  margin: 10px 20px;
 }
