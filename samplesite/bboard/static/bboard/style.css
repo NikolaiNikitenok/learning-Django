@@ -1,8 +1,14 @@
+body {
+  background-color: #252525;
+  color: azure;
+  text-decoration: none;
+}
+
 header h1 {
   font-size: 40pt;
   text-transform: uppercase;
   text-align: center;
-  background: url("bg.png") left / auto 100% no-repeat;
+  background: url("logo_KTP.png") left / auto 100% no-repeat;
 }
 
 nav {
@@ -14,19 +20,29 @@ nav a {
   display: block;
   margin: 10px 0px;
   text-decoration: none;
+  color: azure;
+}
+p a {
+  color: azure;
 }
 section {
   margin-left: 170px;
+}
+.spisok-tovarov {
   display: flex;
   max-width: 1300px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
 }
-div {
-  border: 2px black solid;
+div.block {
+  border: 2px azure solid;
   border-radius: 10px;
   padding: 20px;
   width: 550px;
   margin: 10px 20px;
+}
+input, textarea, select {
+  background-color: #252525;
+  color: azure;
 }

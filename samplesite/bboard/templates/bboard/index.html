@@ -1,17 +1,21 @@
 {% extends 'layout/basic.html' %}
 
 {% block content %}
-{% for bb in bbs %}
-<div>
-		<h2>{{ bb.title }}</h2>
-		<p><b>Описание: </b>{{ bb.content }}</p>
-		<p>
-			<b>Категория: </b><a href="{% url 'index' %}{{ bb.rubric.pk }}/">{{ bb.rubric.name }}</a>
-		</p>
-		<p><b>Стоимость: {{ bb.price }} Рублей</b></p>	
-		<p><b>Опубликовано: </b>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+<div class="spisok-tovarov">
+	{% for bb in bbs %}
+		<div class="block">
+				<h2>{{ bb.title }}</h2>
+				<p><b>Описание: </b>{{ bb.content }}</p>
+				<p>
+					<b>Категория: </b><a href="{% url 'index' %}{{ bb.rubric.pk }}/">{{ bb.rubric.name }}</a>
+				</p>
+				<p><b>Стоимость: {{ bb.price }} Рублей</b></p>	
+				<p><b>Опубликовано: </b>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+				<p><b>Тип предложения: </b>{{ bb.kind }}</p>
+				<p><b>Тип товара: </b>{{ bb.types_of_product }}</p>
+		</div>
+		<br>
+		<br>	
+	{% endfor %}
 </div>
-<br>
-<br>
-{% endfor %}
 {% endblock content %}
